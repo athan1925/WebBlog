@@ -6,6 +6,6 @@ from . import views
 
 
 urlpatterns = [
-    path('', views.blog_list, name="blogs"),
-#    url(r'^(?P<slug>[\w-]+)/$', views.blog_details, name="details"),
+    url('', views.blog_list, name="blogs"),
+    url(r'^(?P<slug>[\w-]+)/$', views.blog_details, name="poste"),
     ]

@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<!––Container of card start ––>
+
+<div class="container" style="margin-top: 60px">
+    <br><br>
+
+    <div class="articles">
+
+        <div class="imagecontainer" style="margin-top: 60px ">
+            <img src="#" width="950" height="500" align="middle"/>
+        </div>
+
+        <div class="articles">
+            <h2>{{poste.title}}</a> </h2>
+            <small><i>Date Published</i>&nbsp;&nbsp;{{poste.published_date}}</small>
+
+            <p>{{poste.body}} </p>
+
+        </div>
+
+    </div>
+</div>
+<!––container of card  end ––>
+{% endblock %}

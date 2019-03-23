@@ -1,10 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Blog List</title>
-</head>
-<body>
-<h1>Blog List</h1>
-</body>
-</html>
+
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<!––Container of card start ––>
+
+<div class="container" style="margin-top: 60px">
+    <br><br>
+
+    <div class="articles">
+        {% for blog in blogs %}
+        <div class="articles">
+
+
+            <h2><a href="{% url 'poste' slug=blog.slug%}" >{{blog.title}}</a></h2>
+            <p>{{blogs.snippet}} </p>
+            <small>Date: &nbsp;&nbsp;{{blog.published_date}}</small>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+<!––container of card  end ––>
+
+
+{% endblock %}
+
